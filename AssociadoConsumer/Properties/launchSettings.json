@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AssociadoConsumer": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
