@@ -20,7 +20,16 @@ namespace AssociadoConsumer
       
         public void Consumer()
         {
-            var factory = new ConnectionFactory() { HostName = "localhost" };
+            //var factory = new ConnectionFactory() { HostName = "localhost" };
+
+            var factory = new ConnectionFactory()
+            {
+                HostName = "192.168.100.5",
+                Port = AmqpTcpEndpoint.UseDefaultPort,
+                UserName = "associado",
+                Password = "associado"
+            };
+
             using (var connection = factory.CreateConnection())
             {
                 using (var channel = connection.CreateModel())
