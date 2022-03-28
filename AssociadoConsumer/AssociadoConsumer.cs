@@ -21,7 +21,9 @@ namespace AssociadoConsumer
         public void Consumer()
         {
             //var factory = new ConnectionFactory() { HostName = "localhost" };
+          
 
+            
             var factory = new ConnectionFactory()
             {
                 HostName = "192.168.100.5",
@@ -32,36 +34,45 @@ namespace AssociadoConsumer
 
             using (var connection = factory.CreateConnection())
             {
-                using (var channel = connection.CreateModel())
+                try
                 {
-                    channel.QueueDeclare(queue: "AssociadoQueue",
-                        durable: false,
-                        exclusive: false,
-                        autoDelete: false,
-                        arguments: null);
-
-                    var consumer = new EventingBasicConsumer(channel);
-                    consumer.Received += (model, ea) =>
+                    using (var channel = connection.CreateModel())
                     {
+                        channel.QueueDeclare(queue: "AssociadoQueue",
+                            durable: false,
+                            exclusive: false,
+                            autoDelete: false,
+                            arguments: null);
 
-                        var body = ea.Body;
-                        var message = Encoding.UTF8.GetString(body.Span);
-                        Associado associado = JsonSerializer.Deserialize<Associado>(message);
-                        Console.WriteLine(associado.Nome);
-                        _associadoRepository.PostCadastroAssociado(associado);
-                      
+                        var consumer = new EventingBasicConsumer(channel);
+                        consumer.Received += (model, ea) =>
+                        {
 
-                    };
-
-                    channel.BasicConsume(queue: "AssociadoQueue",
-                                        autoAck: true,
-                                        consumer: consumer);
-                    System.Threading.Thread.Sleep(2000);
+                            var body = ea.Body;
+                            var message = Encoding.UTF8.GetString(body.Span);
+                            Associado associado = JsonSerializer.Deserialize<Associado>(message);
+                            Console.WriteLine(associado.Nome);
+                            _associadoRepository.PostCadastroAssociado(associado);
 
 
-                    Console.WriteLine("Consumer Funcionando");
-                    Console.ReadLine();
+                        };
+
+                        channel.BasicConsume(queue: "AssociadoQueue",
+                                            autoAck: true,
+                                            consumer: consumer);
+                        System.Threading.Thread.Sleep(2000);
+
+
+                        Console.WriteLine("Consumer Funcionando");
+                        Console.ReadLine();
+                    }
                 }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message + " - " + ex.InnerException);
+                }
+                
+                   
             }
 
         }

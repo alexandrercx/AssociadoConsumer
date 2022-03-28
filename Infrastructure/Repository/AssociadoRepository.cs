@@ -15,9 +15,18 @@ namespace Infrastructure.Repository
         }
         public Int64 PostCadastroAssociado(Associado associado)
         {
-            _context.Associados.Add(associado);
-            _context.SaveChanges();
+            try
+            {
+                _context.Associados.Add(associado);
+                _context.SaveChanges();               
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("AssociadoRepository: " + ex.Message + " - " + ex.InnerException);
+                
+            }
             return associado.Id;
+
         }
     }
 }
