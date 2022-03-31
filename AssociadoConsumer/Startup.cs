@@ -22,7 +22,7 @@ namespace AssociadoConsumer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Contexto>(options =>
-                      options.UseSqlServer("Data Source=192.168.100.5;Initial Catalog=BoaSaude_Associado2;User ID=associado;Password=associado;"));
+                      options.UseSqlServer("Data Source=192.168.100.5,1433;Initial Catalog=BoaSaude_Associado2;User ID=associado;Password=associado;"));
             services.AddDependencyInjectionSetup();
             // services.AddDatabaseSetup(Configuration);
             services.AddTransient<AssociadoConsumer>();
