@@ -26,7 +26,7 @@ namespace AssociadoConsumer
             
             var factory = new ConnectionFactory()
             {
-                HostName = "192.168.100.5",
+                HostName = "192.168.0.190",
                 Port = AmqpTcpEndpoint.UseDefaultPort,
                 UserName = "associado",
                 Password = "associado"
