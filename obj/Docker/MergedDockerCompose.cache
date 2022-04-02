@@ -1,0 +1,12 @@
+name: dockercompose9685589175238000072
+services:
+  associadoconsumer:
+    build:
+      context: C:\Users\Alexandre\source\repos\AssociadoConsumer
+      dockerfile: AssociadoConsumer\Dockerfile
+    image: associadoconsumer
+    networks:
+      default: null
+networks:
+  default:
+    name: dockercompose9685589175238000072_default
