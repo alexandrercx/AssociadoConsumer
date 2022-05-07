@@ -21,8 +21,9 @@ namespace AssociadoConsumer
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<Contexto>(options =>
-                      options.UseSqlServer("Data Source=192.168.0.190,1433;Initial Catalog=BoaSaude_Associado2;User ID=usradm;Password=abc123;MultipleActiveResultSets=true;"));
+            //services.AddDbContext<Contexto>(options =>
+            //          options.UseSqlServer("Data Source=192.168.0.190,1433;Initial Catalog=BD_ServicoAssociado;User ID=usradm;Password=abc123;MultipleActiveResultSets=true;"));
+            services.AddDbContext<Contexto>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddDependencyInjectionSetup();
             // services.AddDatabaseSetup(Configuration);
             services.AddTransient<AssociadoConsumer>();

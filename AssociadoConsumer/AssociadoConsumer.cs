@@ -17,7 +17,7 @@ namespace AssociadoConsumer
             _associadoRepository = associadoRepository;
         }
 
-      
+     
         public void Consumer()
         {
             //var factory = new ConnectionFactory() { HostName = "localhost" };
@@ -26,7 +26,7 @@ namespace AssociadoConsumer
             
             var factory = new ConnectionFactory()
             {
-                HostName = "192.168.0.190",
+                HostName = "192.168.0.193",
                 Port = AmqpTcpEndpoint.UseDefaultPort,
                 UserName = "associado",
                 Password = "associado"

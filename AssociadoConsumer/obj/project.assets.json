@@ -8162,19 +8162,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alexandre\\.nuget\\packages\\": {}
+    "C:\\Users\\jhonf\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\AssociadoConsumer.csproj",
+      "projectUniqueName": "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\AssociadoConsumer.csproj",
       "projectName": "AssociadoConsumer",
-      "projectPath": "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\AssociadoConsumer.csproj",
-      "packagesPath": "C:\\Users\\Alexandre\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\obj\\",
+      "projectPath": "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\AssociadoConsumer.csproj",
+      "packagesPath": "C:\\Users\\jhonf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\AssociadoConsumer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Alexandre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jhonf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -8186,12 +8186,13 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\Domain\\Domain.csproj": {
-              "projectPath": "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\Domain\\Domain.csproj"
+            "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\Domain\\Domain.csproj"
             },
-            "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "C:\\Users\\Alexandre\\source\\repos\\AssociadoConsumer\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\jhonf\\source\\repos\\AssociadoConsumer\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
@@ -8204,6 +8205,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Antlr4.Runtime": {
             "target": "Package",
@@ -8261,7 +8263,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.203\\RuntimeIdentifierGraph.json"
       }
     }
   }
